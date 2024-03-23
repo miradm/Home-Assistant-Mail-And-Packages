@@ -208,12 +208,14 @@ SENSOR_DATA = {
             "NoReply.ODD@dhl.com",
             "noreply@dhl.de",
             "pl.no.reply@dhl.com",
+            "noreply@dhlparcel.nl",
         ],
         "subject": [
             "DHL On Demand Delivery",
             "Powiadomienie o przesyłce",
+            "Je pakket is bezorgd"
         ],
-        "body": ["has been delivered", "została doręczona"],
+        "body": ["has been delivered", "została doręczona", "is bezorgd"],
     },
     "dhl_delivering": {
         "email": [
@@ -221,16 +223,18 @@ SENSOR_DATA = {
             "NoReply.ODD@dhl.com",
             "noreply@dhl.de",
             "pl.no.reply@dhl.com",
+            "noreply@dhlparcel.nl",
         ],
         "subject": [
             "DHL On Demand Delivery",
             "paket kommt heute",
             "Powiadomienie o przesyłce",
+            "We staan vandaag voor de deur tussen",
         ],
-        "body": ["scheduled for delivery TODAY", "zostanie dziś do Państwa doręczona"],
+        "body": ["scheduled for delivery TODAY", "zostanie dziś do Państwa doręczona", "Onze bezorger staat vandaag"],
     },
     "dhl_packages": {},
-    "dhl_tracking": {"pattern": ["\\d{10,11}"]},
+    "dhl_tracking": {"pattern": ["/\(([^)]+)\)/"]},       # ["\\d{10,11}"]},
     # Hermes.co.uk
     "hermes_delivered": {
         "email": ["donotreply@myhermes.co.uk"],
